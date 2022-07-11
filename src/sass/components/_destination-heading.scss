@@ -1,0 +1,30 @@
+@use "../abstracts" as *;
+
+.destination__heading {
+    font-size: 1.6rem;
+    font-family: $text-intro;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    color: #fff;
+
+    @include mq(mobile-medium) {
+        font-size: 2rem;
+    }
+}
+
+.nav-pos {
+    display: inline-block;
+    width: 3rem;
+    letter-spacing: 2.7px;
+    color: rgba(#fff, 0.25);
+}
+
+.planet-picture {
+    margin-block: 4rem;
+    max-width: 100%;
+
+    @include mq(desktop-medium) {
+        flex: 1;
+    }
+}

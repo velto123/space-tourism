@@ -1,0 +1,140 @@
+@use "../abstracts" as *;
+
+.header {
+    min-height: 100vh;
+    overflow: hidden;
+    background-image: url("../assets/home/background-home-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: $padding-default;
+    color: $blue;
+    text-align: center;
+
+    @include mq(tablet) {
+        background-image: url("../assets/home/background-home-tablet.jpg");
+    }
+
+    @include mq(desktop-medium) {
+        background-image: url("../assets/home/background-home-desktop.jpg");
+        text-align: initial;
+        padding-inline: 8vw;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text {
+        @include mq(desktop-medium) {
+            flex-basis: min(75rem, 50%);
+            margin-left: 5rem;
+        }
+    }
+
+    &__intro {
+        font-family: $text-intro;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        letter-spacing: 2.7px;
+        margin-top: 12vh;
+
+        @include mq(mobile-large) {
+            font-size: 1.8rem;
+        }
+
+        @include mq(tablet) {
+            font-size: 2rem;
+        }
+
+        @include mq(desktop-medium) {
+            font-size: 2.8rem;
+            margin-top: 22vh;
+        }
+    }
+
+    &__highlight {
+        margin-block: 2rem;
+        font-family: $text-highlight;
+        font-size: 6rem;
+        text-transform: uppercase;
+        color: #fff;
+
+        @include mq(mobile-medium) {
+            font-size: 8rem;
+        }
+
+        @include mq(mobile-large) {
+            font-size: 10rem;
+        }
+
+        @include mq(tablet) {
+            font-size: 15rem;
+        }
+    }
+
+    &__desc {
+        font-family: $text-main;
+        font-size: 1.5rem;
+        line-height: 167%;
+
+        @include mq(tablet) {
+            font-size: 1.6rem;
+            padding-inline: calc($padding-default + 3vw);
+        }
+
+        @include mq(desktop-medium) {
+            padding-inline: initial;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.btn-explore {
+    width: 11rem;
+    height: 11rem;
+    margin-top: 4rem;
+    border: none;
+    border-radius: 50%;
+    font-family: $text-highlight;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    background-color: #fff;
+    color: $black;
+
+    @media (hover: hover) {
+        &:hover {
+            box-shadow: 0 0 0 2rem rgba(#979797, 0.2);
+        }
+    }
+
+    @include mq(mobile-medium) {
+        margin-top: 6rem;
+        width: 15rem;
+        height: 15rem;
+    }
+
+    @include mq(tablet) {
+        width: 22rem;
+        height: 22rem;
+        font-size: 2.6rem;
+
+        @media (hover: hover) {
+            &:hover {
+                box-shadow: 0 0 0 3.6rem rgba(#979797, 0.2);
+            }
+        }
+    }
+
+    @include mq(desktop-medium) {
+        width: 27rem;
+        height: 27rem;
+        margin-top: 0;
+        align-self: flex-end;
+        flex-shrink: 0;
+        font-size: 3.2rem;
+
+        @media (hover: hover) {
+            &:hover {
+                box-shadow: 0 0 0 5rem rgba(#979797, 0.2);
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+</head>
+
+<body>
+    <div class="app">
+        <img class="logo" src="../assets/shared/logo.svg" alt="logo" draggable="false">
+
+        <button class="hamburger"></button>
+
+        <nav class="navbar">
+            <ul class="nav">
+                <li class="nav__item">
+                    <a class="nav__link" href="index.html"><span class="nav__link-pos">00</span>Home</a>
+                </li>
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link" href="destination.html"><span class="nav__link-pos">01</span>Destination</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href=""><span class="nav__link-pos">02</span>Crew</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href=""><span class="nav__link-pos">03</span>Technology</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="destination-container">
+            <div class="destination-header">
+                <h2 class="destination__heading"><span class="nav-pos">01</span>Pick your destination</h2>
+                <picture id="picture">
+                    <source srcset="../assets/destination/image-moon.webp" type="image/webp">
+                    <img class="planet-picture" src="../assets/destination/image-moon.png" alt="planet picture">
+                </picture>
+            </div>
+            <div class="planet-full-info">
+                <ul class="planets">
+                    <li class="planets__item planets__item--active"><a class="planets__link" href="">Moon</a></li>
+                    <li class="planets__item"><a class="planets__link" href="">Mars</a></li>
+                    <li class="planets__item"><a class="planets__link" href="">Europa</a></li>
+                    <li class="planets__item"><a class="planets__link" href="">Titan</a></li>
+                </ul>
+                <div class="planet-info">
+                    <h3 class="planet-name">Moon</h3>
+                    <p class="planet-desc">See our planet as you’ve never seen it before. A perfect relaxing trip away
+                        to help
+                        regain perspective and come back refreshed. While you’re there, take in some history by visiting
+                        the Luna 2 and Apollo 11 landing sites.</p>
+                    <div class="planet-more-info">
+                        <div class="planet-more-info__wrapper">
+                            <h4 class="planet-more-info__heading">Avg. distance</h4>
+                            <p class="planet-more-info__text planet-distance">384,400 km</p>
+                        </div>
+                        <div class="planet-more-info__wrapper">
+                            <h4 class="planet-more-info__heading">Est. travel time</h4>
+                            <p class="planet-more-info__text planet-travel">3 days</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

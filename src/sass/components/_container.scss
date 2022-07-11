@@ -1,0 +1,22 @@
+@use "../abstracts" as *;
+
+.destination-container {
+    min-height: 100vh;
+    padding: 20vh $padding-default $padding-default;
+    background-image: url("../assets/destination/background-destination-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+
+    @include mq(tablet) {
+        background-image: url("../assets/destination/background-destination-tablet.jpg");
+    }
+    @include mq(desktop-medium) {
+        background-image: url("../assets/destination/background-destination-desktop.jpg");
+        text-align: initial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15rem;
+    }
+}

@@ -1,0 +1,23 @@
+@use "breakpoints" as *;
+
+@mixin mq($breakpoint) {
+    $size: map-get($breakpoints, $breakpoint);
+    @if ($size) {
+        @media screen and (min-width: $size) {
+            @content;
+        }
+    } @else {
+        @error "Breakpoint #{$breakpoint} not found";
+    }
+}
+
+@mixin mqp($breakpoint) {
+    $size: map-get($breakpoints, $breakpoint);
+    @if ($size) {
+        @media screen and (min-width: $size) and (orientation: portrait) {
+            @content;
+        }
+    } @else {
+        @error "Breakpoint #{$breakpoint} not found";
+    }
+}

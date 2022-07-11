@@ -1,0 +1,36 @@
+@use "typography";
+@use "../abstracts" as *;
+
+html {
+    font-size: 62.5%;
+}
+
+.logo {
+    position: absolute;
+    top: 2.4rem;
+    left: 2.4rem;
+    width: 40px;
+    height: 40px;
+    user-select: none;
+    @include mq(desktop-medium) {
+        top: 5rem;
+        left: 5rem;
+    }
+}
+
+.hamburger {
+    position: absolute;
+    top: 3.35rem;
+    right: 2.4rem;
+    width: 24px;
+    height: 21px;
+    background-image: url("../assets/shared/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    @include mq(desktop-medium) {
+        display: none;
+    }
+}
